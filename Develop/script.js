@@ -17,10 +17,19 @@ generateBtn.addEventListener("click", displayPasswordParameters);
 function displayPasswordParameters() 
 {
   var selectedPasswordLength = prompt("Enter password length. Password length must be between 8 and 128 characters.");
+  var password = "";
   alert("Select if you would like uppercase letters, lowercase letters, numbers and/or special characters in your password");
-  var upperCase = confirm("Do uou want uppercase letters in your password?");
+  var upperCase = confirm("Do you want uppercase letters in your password?");
   var lowerCase = confirm("Do you want lower case letters in your password?");
-  var password = generatePassword(selectedPasswordLength,1,1,1,0);
+  var numbers = confirm("Do you want numbers in your password?");
+  var specialCharacters = confirm("Do you want special characters in your password?")
+    if (upperCase !== true && lowerCase !== true && numbers !== true && specialCharacters !== true){
+      alert("You must choose at least one variable to include?");
+      password = "Incorrect Input";      
+    }
+      else{
+        password = generatePassword(selectedPasswordLength,upperCase,lowerCase, specialCharacters,numbers);
+      }
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -37,19 +46,19 @@ function generatePassword(passwordLength, upperCase, lowerCase, specialCharacter
   var passwordText = "";
   var currentPasswordLength = 0;
   while (currentPasswordLength < passwordLength) {
-    if ((upperCase === 1) && (currentPasswordLength < passwordLength)) {
+    if ((upperCase === true) && (currentPasswordLength < passwordLength)) {
       passwordText = passwordText + String.fromCharCode(randomNumberGenerator(65,90));
       currentPasswordLength++;
     }
-    if ((lowerCase === 1) && (currentPasswordLength < passwordLength)) {
+    if ((lowerCase === true) && (currentPasswordLength < passwordLength)) {
       passwordText = passwordText + String.fromCharCode(randomNumberGenerator(98,122));
       currentPasswordLength++;
     }
-    if ((specialCharacters === 1) && (currentPasswordLength < passwordLength)) {
+    if ((specialCharacters === true) && (currentPasswordLength < passwordLength)) {
       passwordText = passwordText + String.fromCharCode(randomNumberGenerator(33,47));
       currentPasswordLength++;
     }
-    if ((numbers === 1) && (currentPasswordLength < passwordLength)) {
+    if ((numbers === true) && (currentPasswordLength < passwordLength)) {
       passwordText = passwordText + randomNumberGenerator(0,9);
       currentPasswordLength++;
     }

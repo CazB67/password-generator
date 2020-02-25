@@ -2,19 +2,19 @@
 var generateBtn = document.querySelector("#generate");
 
 // Event listener to generate button. When we click button displayPasswordParameters function executes
-generateBtn.addEventListener("click", displayPasswordParameters);
+generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
-function displayPasswordParameters() {
-  var selectedPasswordLength = prompt("Enter password length. Password length must be between 8 and 128 characters.");
+function writePassword() {
+  var selectedPasswordLength = prompt("Enter a password length between 8 and 128 characters.");
     if (selectedPasswordLength < 8 ){
-        alert("Your password is too short. Password length must be between 8 and 128 characters.");
+        alert("Your password is too short. Try again with a password length between 8 and 128 characters.");
         return;
         
         
     }
       else if (selectedPasswordLength > 128){
-        alert("Your password is too long. Password length must be between 8 and 128 characters.");
+        alert("Your password is too long. Try again with a password length between 8 and 128 characters.");
         return;
         
       }

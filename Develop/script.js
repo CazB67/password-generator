@@ -1,21 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-// Add event listener to generate button
+
+// Event listener to generate button. When we click button displayPasswordParameters function executes
 generateBtn.addEventListener("click", displayPasswordParameters);
 
-
-
-
-/* In order to have the button in the html run the javascript function, the js does the following:
-1. On load, finds the generate button by using var generateBtn = document.querySelector("#generate");
-2. Then it uses the var generateBtn to add an event listener -- generateBtn.addEventListener("click", writePassword);
-3. "Click is the event -- which is a standard set of events see https://www.w3schools.com/jsref/dom_obj_event.asp"
-4. WritePassword is simply the function that we write that when the event is triggered, runs. 
-*/
-
 // Write password to the #password input
-function displayPasswordParameters() 
-{
+function displayPasswordParameters() {
   var selectedPasswordLength = prompt("Enter password length. Password length must be between 8 and 128 characters.");
   var password = "";
   alert("Select if you would like uppercase letters, lowercase letters, numbers and/or special characters in your password");
@@ -23,13 +13,15 @@ function displayPasswordParameters()
   var lowerCase = confirm("Do you want lower case letters in your password?");
   var numbers = confirm("Do you want numbers in your password?");
   var specialCharacters = confirm("Do you want special characters in your password?")
-    if (upperCase !== true && lowerCase !== true && numbers !== true && specialCharacters !== true){
+    if (upperCase === false && lowerCase === false && numbers === false && specialCharacters === false){
       alert("You must choose at least one variable to include?");
       password = "Incorrect Input";      
     }
       else{
         password = generatePassword(selectedPasswordLength,upperCase,lowerCase, specialCharacters,numbers);
       }
+
+
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;

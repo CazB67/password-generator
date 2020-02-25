@@ -7,8 +7,21 @@ generateBtn.addEventListener("click", displayPasswordParameters);
 // Write password to the #password input
 function displayPasswordParameters() {
   var selectedPasswordLength = prompt("Enter password length. Password length must be between 8 and 128 characters.");
+    if (selectedPasswordLength < 8 ){
+        alert("Your password is too short. Password length must be between 8 and 128 characters.");
+        return;
+        
+        
+    }
+      else if (selectedPasswordLength > 128){
+        alert("Your password is too long. Password length must be between 8 and 128 characters.");
+        return;
+        
+      }
+
+  
   var password = "";
-  alert("Select if you would like uppercase letters, lowercase letters, numbers and/or special characters in your password");
+  alert("Select if you would like uppercase letters, lowercase letters, numbers and/or special characters in your password. You must select at least one variable.");
   var upperCase = confirm("Do you want uppercase letters in your password?");
   var lowerCase = confirm("Do you want lower case letters in your password?");
   var numbers = confirm("Do you want numbers in your password?");

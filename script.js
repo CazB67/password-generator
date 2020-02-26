@@ -5,15 +5,17 @@ var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
+var passwordText = document.querySelector("#password");
 function writePassword() {
-  var selectedPasswordLength = prompt("Enter a password length between 8 and 128 characters.");
-    if (selectedPasswordLength < 8 ){
+    document.write("Hi");
+  var selectedPasswordLength = document.querySelector("#userLengthChoice");
+    if (selectedPasswordLength.value < 8 ){
         alert("Your password is too short. Try again with a password length between 8 and 128 characters.");
         return;
         
         
     }
-      else if (selectedPasswordLength > 128){
+      else if (selectedPasswordLength.value > 128){
         alert("Your password is too long. Try again with a password length between 8 and 128 characters.");
         return;
         

@@ -11,7 +11,7 @@ The password criteria is:
 * The password needs to be randomly generated
 
 ## Installation
-The pages `index.html`, `scrip.js` and `style.css` were devloped and added to in VSCode. 
+The pages `index.html`, `scrip.js` and `style.css` were devloped and added to in VSCode. First the generate password function was created to create a password that features a random number from assigned charcode values. This guide was used https://www.w3schools.com/charsets/ref_html_ascii.asp. 
 
 
 ## Usage
@@ -25,7 +25,6 @@ This has been deployed to the URLs
 ## Credits
 * Team at UWA Coding Bootcamp
 * Jonathon Bates
-* Various password generator tutorials
 
 ## License
 MIT License

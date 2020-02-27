@@ -10,11 +10,10 @@ generateBtn.addEventListener("click", writePassword);
 function writePassword() {
   //Create variable so password is shown in the text area
   var passwordText = document.querySelector("#password");
-  passwordText.value="ihiyuiyiuy";
   //Password conditions
   var selectedPasswordLength = prompt("Enter a password length between 8 and 128 characters.");
     if (selectedPasswordLength < 8 ){
-      passwordText.value="Your password is too short. Try again with a password length between 8 and 128 characters.";
+      alert("Your password is too short. Try again with a password length between 8 and 128 characters.");
         //breaks out of function
         return;
 

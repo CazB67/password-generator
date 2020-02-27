@@ -2,12 +2,13 @@
 Assignment 3
 
 ## Description
-This is an assignment to show learning of javascript and its functions.
-
-* 
-* 
-* 
-* 
+This is an assignment to show learning of javascript and its functions. The task was to create an application that randomly generates a strong password that meets certain criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by JavaScript code. It  features a clean and polished user interface and is media responsive.
+The password criteria is:
+* The user selects a password length of between 8 and 128 characters
+* The user selects what character types to include out of upper case letters, lower case letters, numbers and special characters.
+* The user must select at least one character type
+* The password needs to be written to the page
+* The password needs to be randomly generated
 
 ## Installation
 The pages `index.html`, `scrip.js` and `style.css` were devloped and added to in VSCode. 

@@ -13,13 +13,13 @@ function writePassword() {
   //Password conditions
   var selectedPasswordLength = prompt("Enter a password length between 8 and 128 characters.");
     if (selectedPasswordLength < 8 ){
-      alert("Your password is too short. Try again with a password length between 8 and 128 characters.");
+      alert("Incorrect input. Try again with a password length between 8 and 128 characters.");
         //function goes back to event listener
         return;
 
     }
       else if (selectedPasswordLength > 128){
-        alert("Your password is too long. Try again with a password length between 8 and 128 characters.");
+        alert("Incorrect input. Try again with a password length between 8 and 128 characters.");
         //function goes back to event listener
         return;
         

@@ -23,27 +23,29 @@ function writePassword() {
         //function goes back to event listener
         return;
       }
-
+      
   alert("Select if you would like uppercase letters, lowercase letters, numbers and/or special characters in your password. You must select at least one variable.");
   var upperCase = confirm("Do you want uppercase letters in your password?");
   var lowerCase = confirm("Do you want lower case letters in your password?");
   var numbers = confirm("Do you want numbers in your password?");
   var specialCharacters = confirm("Do you want special characters in your password?")
-    if (upperCase === false && lowerCase === false && numbers === false && specialCharacters === false){
+  if (upperCase === false && lowerCase === false && numbers === false && specialCharacters === false)
+  {
       alert("You must choose at least one variable to include."); 
       passwordText.value="Incorrect Input";
 
-    }
+  }
       //If all password conditions are satisfied we can move on to next function and generate the password
-      else{
-        passwordText.value = generatePassword(selectedPasswordLength,upperCase,lowerCase, specialCharacters,numbers);
- 
-      }
+  else
+  {
+    passwordText.value = "";
+    passwordText.value = generatePassword(selectedPasswordLength,upperCase,lowerCase, specialCharacters,numbers);  
+  }
 }
 
 //Generate password with arguments
 function generatePassword(passwordLength, upperCase, lowerCase, specialCharacters, numbers) {
-
+  var passwordText = "";
   var currentPasswordLength = 0;
   //Keeps going until condition becomes true. CharCode assigns number values to characters on keyboard keys.
   while (currentPasswordLength < passwordLength) {

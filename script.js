@@ -22,8 +22,6 @@ function writePassword() {
         alert("Incorrect input. Try again with a password length between 8 and 128 characters.");
         //function goes back to event listener
         return;
-        
-        
       }
 
   alert("Select if you would like uppercase letters, lowercase letters, numbers and/or special characters in your password. You must select at least one variable.");

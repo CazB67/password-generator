@@ -14,14 +14,15 @@ function writePassword() {
   var selectedPasswordLength = prompt("Enter a password length between 8 and 128 characters.");
     if (selectedPasswordLength < 8 ){
       alert("Your password is too short. Try again with a password length between 8 and 128 characters.");
-        //breaks out of function
+        //function goes back to event listener
         return;
 
     }
       else if (selectedPasswordLength > 128){
         alert("Your password is too long. Try again with a password length between 8 and 128 characters.");
-        //break out of the function
+        //function goes back to event listener
         return;
+        
         
       }
 
@@ -32,11 +33,13 @@ function writePassword() {
   var specialCharacters = confirm("Do you want special characters in your password?")
     if (upperCase === false && lowerCase === false && numbers === false && specialCharacters === false){
       alert("You must choose at least one variable to include."); 
-      passwordText.value="Incorrect Input";  
+      passwordText.value="Incorrect Input";
+
     }
       //If all password conditions are satisfied we can move on to next function and generate the password
       else{
         passwordText.value = generatePassword(selectedPasswordLength,upperCase,lowerCase, specialCharacters,numbers);
+ 
       }
 }
 

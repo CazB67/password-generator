@@ -1,6 +1,6 @@
 //Finds node with the id generate. 
 var generateBtn = document.querySelector("#generate");
-var passwordText = "";
+
 
 
 // Event listener to generate button. When we click button writePassword function executes

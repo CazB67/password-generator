@@ -17,8 +17,6 @@ function writePassword() {
         //breaks out of function
         return;
 
-  
-        
     }
       else if (selectedPasswordLength > 128){
         alert("Your password is too long. Try again with a password length between 8 and 128 characters.");
@@ -33,7 +31,8 @@ function writePassword() {
   var numbers = confirm("Do you want numbers in your password?");
   var specialCharacters = confirm("Do you want special characters in your password?")
     if (upperCase === false && lowerCase === false && numbers === false && specialCharacters === false){
-      alert("You must choose at least one variable to include?");   
+      alert("You must choose at least one variable to include."); 
+      passwordText.value="Incorrect Input";  
     }
       //If all password conditions are satisfied we can move on to next function and generate the password
       else{
@@ -44,8 +43,6 @@ function writePassword() {
 //Generate password with arguments
 function generatePassword(passwordLength, upperCase, lowerCase, specialCharacters, numbers) {
 
-  // Name variables. We want passowrd as a string.
-  
   var currentPasswordLength = 0;
   //Keeps going until condition becomes true. CharCode assigns number values to characters on keyboard keys.
   while (currentPasswordLength < passwordLength) {

@@ -11,20 +11,19 @@ The password criteria is:
 * The password needs to be randomly generated
 
 ## Installation
-The pages `index.html`, `scrip.js` and `style.css` were devloped and added to in VSCode. First the generate password function was created to create a password that features a random number from assigned charcode values. This guide was used https://www.w3schools.com/charsets/ref_html_ascii.asp. 
+The pages `index.html`, `script.js` and `style.css` were developed and added to in VSCode. First the generatePassword function was created to create a password that features a random number from assigned charcode values. This guide was used to obtain values -  https://www.w3schools.com/charsets/ref_html_ascii.asp. A while loop was used followed by a random number call to create a string from the random ASCII values. Finally the writePassword function was used and conditions for the password paramaters developed.
 
 
 ## Usage
 This has been deployed to the URLs 
 
-*The URL of the deployed application is https://cazb67.github.io/password-generator/
+* The URL of the deployed application is https://cazb67.github.io/password-generator/
 
-*The URL of the GitHub repository is https://github.com/CazB67/password-generator
+* The URL of the GitHub repository is https://github.com/CazB67/password-generator
 
 
 ## Credits
 * Team at UWA Coding Bootcamp
-* Jonathon Bates
 
 ## License
 MIT License

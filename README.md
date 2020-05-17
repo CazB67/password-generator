@@ -1,5 +1,5 @@
 # Password-generator
-Assignment 3
+An application that uses Javascript to generate a random password based on user-selected criteria
 
 ## Description
 This is an assignment to show learning of javascript and its functions. The task was to create an application that randomly generates a strong password that meets certain criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by JavaScript code. It  features a clean and polished user interface and is media responsive.
@@ -11,7 +11,7 @@ The password criteria is:
 * The password needs to be randomly generated
 
 ## Installation
-The pages `index.html`, `script.js` and `style.css` were developed and added to in VSCode. First the generatePassword function was created to create a password that features a random number from assigned charcode values. This guide was used to obtain values -  https://www.w3schools.com/charsets/ref_html_ascii.asp. A while loop was used followed by a random number call to create a string from the random ASCII values. Finally the writePassword function was used and conditions for the password paramaters developed. I tried clearing the password string and "incorrect input" strings on button click for better usability but haven't worked out how to do it yet.
+The pages `index.html`, `script.js` and `style.css` were developed and added to in VSCode. First the generatePassword function was created to create a password that features a random number from assigned charcode values. This guide was used to obtain values -  https://www.w3schools.com/charsets/ref_html_ascii.asp. A while loop was used followed by a random number call to create a string from the random ASCII values. Finally the writePassword function was used and conditions for the password paramaters developed. I have tried clearing the password string and "incorrect input" strings on button click for better usability but haven't worked out how to do it yet.
 
 
 ## Usage
